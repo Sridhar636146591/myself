@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Projects = () => {
+const AllProjectsPage = () => {
+  // We can eventually pull this from a separate data file, but for now we'll define it here.
   const projectList = [
     {
       title: "Real-Time MEV Attack Detection Dashboard",
@@ -35,38 +36,44 @@ const Projects = () => {
       linkText: "Live Application",
       link: "https://froud-detection-ej1p.onrender.com",
       featured: true
+    },
+    {
+      title: "Campus Community Hub (Class Connect)",
+      category: "Full-Stack Web App",
+      date: "2025",
+      award: null,
+      description: "An all-in-one digital campus platform designed to help students connect, collaborate, and grow with their peers. Features community forums, event tracking, and resource sharing.",
+      techStack: ["Web Technologies", "Community Platform", "Render Cloud"],
+      linkText: "Live Portal",
+      link: "https://class-connect-z8nb.onrender.com/",
+      featured: false
     }
   ];
 
   return (
-    <section id="projects" className="bg-black py-28 px-6 md:px-12 w-full text-white relative overflow-hidden font-sans">
+    <div className="bg-black min-h-screen pt-32 pb-28 px-6 md:px-12 w-full text-white relative overflow-hidden font-sans">
       {/* Background radial glow */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#ff2a2a]/10 rounded-full blur-[120px] pointer-events-none"></div>
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-red-950/10 rounded-full blur-[120px] pointer-events-none"></div>
 
       <div className="max-w-6xl mx-auto relative z-10">
         
-        {/* Header */}
-        <div data-aos="fade-up" className="mb-20 max-w-2xl">
-          <div className="inline-block border border-[#ff2a2a]/40 rounded-full px-5 py-1.5 text-xs text-[#ff2a2a] font-black uppercase tracking-widest mb-6 bg-[#ff2a2a]/5 shadow-[0_0_15px_rgba(255,42,42,0.1)]">
-            My Projects
-          </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 tracking-tight leading-none text-white">
-            Innovations & Built Solutions
-          </h2>
-          <p className="text-white/60 text-base md:text-lg font-medium leading-relaxed">
-            Applying machine learning models, decentralized ledger analytics, and cloud orchestration to solve complex real-world challenges.
+        {/* Navigation / Header */}
+        <div className="mb-16 flex flex-col items-start">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 tracking-tight leading-none text-white">
+            All Projects & Innovations
+          </h1>
+          <p className="text-white/60 text-base md:text-lg font-medium leading-relaxed max-w-2xl">
+            A comprehensive showcase of my work spanning AI, blockchain security, full-stack applications, and data-driven systems.
           </p>
         </div>
 
         {/* Project Grid */}
-        <div className="grid grid-cols-1 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projectList.map((project, idx) => (
             <div 
               key={idx}
-              data-aos={idx % 2 === 0 ? "fade-right" : "fade-left"}
-              data-aos-delay={100 * (idx + 1)}
-              className={`group relative rounded-[2rem] p-8 md:p-10 border transition-all duration-500 overflow-hidden flex flex-col justify-between min-h-[460px] ${
+              className={`group relative rounded-[2rem] p-8 md:p-10 border transition-all duration-500 overflow-hidden flex flex-col justify-between min-h-[300px] ${
                 project.featured 
                   ? 'bg-gradient-to-br from-neutral-900 via-neutral-950 to-neutral-900 border-[#ff2a2a]/30 hover:border-[#ff2a2a]/80 shadow-[0_20px_50px_rgba(0,0,0,0.5)] hover:shadow-[0_20px_50px_rgba(255,42,42,0.15)]' 
                   : 'bg-neutral-950/80 border-neutral-800 hover:border-neutral-700 shadow-md hover:shadow-lg'
@@ -138,23 +145,9 @@ const Projects = () => {
           ))}
         </div>
 
-        {/* View More Button */}
-        <div data-aos="fade-up" className="mt-20 flex justify-end">
-          <Link 
-            to="/projects"
-            className="group relative inline-flex items-center gap-3 px-8 py-4 bg-transparent border border-neutral-700 text-white rounded-full font-bold overflow-hidden transition-all duration-500 hover:border-[#ff2a2a] hover:shadow-[0_0_30px_rgba(255,42,42,0.2)]"
-          >
-            <div className="absolute inset-0 bg-gradient-to-r from-[#ff2a2a] to-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0"></div>
-            <span className="relative z-10">View All Projects</span>
-            <svg className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
-          </Link>
-        </div>
-
       </div>
-    </section>
+    </div>
   );
 };
 
-export default Projects;
+export default AllProjectsPage;

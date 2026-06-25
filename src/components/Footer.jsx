@@ -1,6 +1,10 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 
 const Footer = () => {
+  const location = useLocation();
+  const isHome = location.pathname === '/';
+
   return (
     <footer className="bg-[#111111] text-[#d4d4d4] py-16 px-6 md:px-12 w-full font-mono text-[10px] md:text-xs tracking-widest flex flex-col justify-between min-h-[50vh]">
       
@@ -14,7 +18,7 @@ const Footer = () => {
         
         <div className="flex flex-col gap-1 md:items-center">
           <p>Presidency University Student</p>
-          <a href="#projects" className="underline hover:text-white transition-colors mt-1 underline-offset-4 decoration-1">View Projects</a>
+          <a href={isHome ? "#projects" : "/#projects"} className="underline hover:text-white transition-colors mt-1 underline-offset-4 decoration-1">View Projects</a>
         </div>
         
         <div className="flex flex-col gap-1 md:items-end">
@@ -34,7 +38,7 @@ const Footer = () => {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 w-full items-end font-medium">
         <div className="flex flex-col gap-6">
           <div className="flex flex-col gap-2">
-            <a href="#contact" className="underline hover:text-white transition-colors underline-offset-4 decoration-1 font-bold">Contact</a>
+            <a href={isHome ? "#contact" : "/#contact"} className="underline hover:text-white transition-colors underline-offset-4 decoration-1 font-bold">Contact</a>
             <a href="/Sridhar_S_Resume.pdf" target="_blank" rel="noopener noreferrer" className="underline hover:text-white transition-colors underline-offset-4 decoration-1 font-bold">View Resume (PDF)</a>
             <a href="/Sridhar_S_Resume_Updated.docx" download className="underline hover:text-white transition-colors underline-offset-4 decoration-1 font-bold">Download Resume (Word)</a>
           </div>
