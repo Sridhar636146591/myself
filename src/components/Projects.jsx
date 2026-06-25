@@ -10,7 +10,7 @@ const Projects = () => {
       description: "Engineered a real-time dashboard to detect Maximal Extractable Value (MEV) attacks on Ethereum, targeting front-running and sandwich attack patterns in DeFi transactions. Implemented AI-based threat modeling and real-time transaction monitoring pipelines.",
       techStack: ["Python", "Ethereum Web3", "AI/ML Detection", "Data Pipelines"],
       linkText: "BizTech Winner 2026",
-      link: "#",
+      link: "https://www.linkedin.com/posts/sridhar-s-2b9670350_presidencyuniversity-web3-blockchain-activity-7453059626570514432-94bD?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFepwK0BzInejhLiWDBGEvk4EfaNt6fOHMQ",
       featured: true
     },
     {
@@ -48,7 +48,7 @@ const Projects = () => {
         </div>
 
         {/* Project Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 gap-10">
           {projectList.map((project, idx) => (
             <div 
               key={idx}
