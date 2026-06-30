@@ -35,6 +35,17 @@ const Projects = () => {
       linkText: "Live Application",
       link: "https://froud-detection-ej1p.onrender.com",
       featured: true
+    },
+    {
+      title: "AI-Driven Supply Chain Tracker",
+      category: "Google Hack2Skill / Logistics",
+      date: "2026",
+      award: "Developed for Google Hack2Skill",
+      description: "Built an AI-powered supply chain management and tracking system for the Google Hack2Skill hackathon. Implemented predictive delay modeling, real-time logistics analytics, and inventory optimization pipelines to streamline operations.",
+      techStack: ["Python", "Google Cloud AI", "Logistics Analytics", "Render Cloud"],
+      linkText: "Live Application",
+      link: "https://supply-chain-zbfw.onrender.com/",
+      featured: false
     }
   ];
 
