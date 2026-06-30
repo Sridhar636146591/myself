@@ -16,14 +16,14 @@ const AllProjectsPage = () => {
       featured: true
     },
     {
-      title: "BioSync — AI Health Tracker",
-      category: "AI Health Tech / Full-Stack",
-      date: "2025 – 2026",
-      award: null,
-      description: "Built and deployed a full-stack AI-powered health tracking web application featuring intelligent health metric analysis and personalized collections strategy. Deployed live with an insights engine that surfaces patterns and risk indicators.",
-      techStack: ["Python", "REST APIs", "AI/ML Integration", "Render Cloud"],
+      title: "AI-Driven Supply Chain Tracker",
+      category: "Google Hack2Skill / Logistics",
+      date: "2026",
+      award: "Developed for Google Hack2Skill",
+      description: "Built an AI-powered supply chain management and tracking system for the Google Hack2Skill hackathon. Implemented predictive delay modeling, real-time logistics analytics, and inventory optimization pipelines to streamline operations.",
+      techStack: ["Python", "Google Cloud AI", "Logistics Analytics", "Render Cloud"],
       linkText: "Live Application",
-      link: "https://biosync-health-app-1.onrender.com",
+      link: "https://supply-chain-zbfw.onrender.com/",
       featured: false
     },
     {
@@ -49,14 +49,14 @@ const AllProjectsPage = () => {
       featured: false
     },
     {
-      title: "AI-Driven Supply Chain Tracker",
-      category: "Google Hack2Skill / Logistics",
-      date: "2026",
-      award: "Developed for Google Hack2Skill",
-      description: "Built an AI-powered supply chain management and tracking system for the Google Hack2Skill hackathon. Implemented predictive delay modeling, real-time logistics analytics, and inventory optimization pipelines to streamline operations.",
-      techStack: ["Python", "Google Cloud AI", "Logistics Analytics", "Render Cloud"],
+      title: "BioSync — AI Health Tracker",
+      category: "AI Health Tech / Full-Stack",
+      date: "2025 – 2026",
+      award: null,
+      description: "Built and deployed a full-stack AI-powered health tracking web application featuring intelligent health metric analysis and personalized collections strategy. Deployed live with an insights engine that surfaces patterns and risk indicators.",
+      techStack: ["Python", "REST APIs", "AI/ML Integration", "Render Cloud"],
       linkText: "Live Application",
-      link: "https://supply-chain-zbfw.onrender.com/",
+      link: "https://biosync-health-app-1.onrender.com",
       featured: false
     }
   ];
