@@ -11,6 +11,11 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 import AllProjectsPage from './components/AllProjectsPage'
 
+// Disable browser's automatic scroll restoration
+if (typeof window !== 'undefined' && 'scrollRestoration' in window.history) {
+  window.history.scrollRestoration = 'manual';
+}
+
 const ScrollToTop = () => {
   const { pathname, hash } = useLocation();
 
@@ -23,11 +28,17 @@ const ScrollToTop = () => {
         }
       }, 100);
     } else {
-      document.documentElement.style.scrollBehavior = 'auto';
+      const html = document.documentElement;
+      html.style.scrollBehavior = 'auto';
       window.scrollTo(0, 0);
-      setTimeout(() => {
-        document.documentElement.style.scrollBehavior = '';
-      }, 0);
+      
+      // Use nested requestAnimationFrame to restore smooth scrolling 
+      // after the browser has completed the instant scroll-to-top.
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          html.style.scrollBehavior = '';
+        });
+      });
     }
   }, [pathname, hash]);
 

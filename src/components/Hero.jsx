@@ -159,7 +159,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative w-full h-screen overflow-hidden bg-black">
+    <section id="home" className="relative w-full h-screen overflow-hidden bg-black">
       <style>{`
         @keyframes kenburns {
           0% { transform: scale(1); }
