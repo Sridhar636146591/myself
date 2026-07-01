@@ -258,19 +258,31 @@ const Contact = () => {
             {/* Bottom Section */}
             <div className="flex flex-col md:flex-row gap-12 mt-4">
               {/* Left text */}
-              <div className="flex-1 flex items-start gap-4 text-sm font-medium text-white/90">
-                <input 
-                  type="checkbox" 
-                  id="permission" 
-                  checked={formData.permission}
-                  onChange={handleChange}
-                  className="mt-1 w-4 h-4 rounded-sm border-white/40 bg-transparent text-white focus:ring-white focus:ring-offset-0 focus:ring-offset-transparent cursor-pointer" 
-                  style={{ accentColor: "white" }}
-                />
-                <label htmlFor="permission" className="cursor-pointer max-w-[280px] leading-snug">
+              <label htmlFor="permission" className="flex-1 flex items-start gap-4 text-sm font-medium text-white/90 cursor-pointer select-none">
+                <div className="relative mt-0.5 flex-shrink-0">
+                  <input 
+                    type="checkbox" 
+                    id="permission" 
+                    checked={formData.permission}
+                    onChange={handleChange}
+                    className="peer sr-only"
+                  />
+                  <div className={`w-5 h-5 rounded border transition-all flex items-center justify-center peer-focus-visible:ring-2 peer-focus-visible:ring-white peer-focus-visible:ring-offset-2 peer-focus-visible:ring-offset-[#ff2a2a] ${
+                    formData.permission 
+                      ? 'bg-white border-white' 
+                      : 'border-white/40 bg-transparent hover:border-white'
+                  }`}>
+                    {formData.permission && (
+                      <svg className="w-3 h-3 text-[#ff2a2a]" fill="none" stroke="currentColor" strokeWidth="3.5" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                      </svg>
+                    )}
+                  </div>
+                </div>
+                <span className="max-w-[280px] leading-snug">
                   I give permission to contact me at this email address.
-                </label>
-              </div>
+                </span>
+              </label>
 
               {/* Right text & button */}
               <div className="flex-1 flex flex-col gap-8 text-xs text-white/77 font-medium">
