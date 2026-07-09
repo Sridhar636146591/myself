@@ -58,6 +58,17 @@ const AllProjectsPage = () => {
       linkText: "Live Application",
       link: "https://biosync-health-app-1.onrender.com",
       featured: false
+    },
+    {
+      title: "Crime Prediction & Analysis Portal",
+      category: "AI / Data Analytics",
+      date: "2024",
+      award: null,
+      description: "Developed a predictive modeling and analysis application to forecast crime patterns and hotspots. Implemented machine learning models alongside interactive maps to aid data-driven decision making.",
+      techStack: ["Python", "Machine Learning", "Data Visualization", "Render Cloud"],
+      linkText: "Live Application",
+      link: "https://crime-prediction-3d63.onrender.com",
+      featured: false
     }
   ];
 
