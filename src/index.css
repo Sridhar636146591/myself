@@ -11,7 +11,7 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 125%; /* Scale to match 125% browser zoom appearance at 100% zoom */
+  font-size: 115%; /* Scale down slightly to 115% zoom appearance */
 }
 
 body {
