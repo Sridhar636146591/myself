@@ -1,13 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-const Certifications = () => {
+const AllCertificationsPage = () => {
   const certifications = [
     {
       title: "IBM Database Management Systems",
       issuer: "IBM",
       date: "Recent",
-      credentialUrl: "/certificates/IBM%20DBMS.pdf",
+      credentialUrl: "/certificates/IBM DBMS.pdf",
       icon: (
         <svg className="w-10 h-10 text-[#ff2a2a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
@@ -105,43 +104,43 @@ const Certifications = () => {
   ];
 
   return (
-    <section id="certifications" className="bg-neutral-950 py-28 px-6 md:px-12 w-full relative overflow-hidden font-sans text-white">
+    <div className="bg-neutral-950 min-h-screen pt-32 pb-28 px-6 md:px-12 w-full text-white relative overflow-hidden font-sans">
+      {/* Background ambient glow */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#ff2a2a]/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#ff2a2a]/5 rounded-full blur-[120px] pointer-events-none" />
+
       <div className="max-w-6xl mx-auto relative z-10">
-        
+
         {/* Header */}
-        <div data-aos="fade-up" className="mb-20 max-w-2xl">
+        <div className="mb-16 flex flex-col items-start">
           <div className="inline-block border border-[#ff2a2a]/40 rounded-full px-5 py-1.5 text-xs text-[#ff2a2a] font-black uppercase tracking-widest mb-6 bg-[#ff2a2a]/5 shadow-[0_0_15px_rgba(255,42,42,0.1)]">
             Continuous Learning
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 tracking-tight leading-none text-white">
-            Certifications & Training
-          </h2>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 tracking-tight leading-none text-white">
+            All Certifications & Training
+          </h1>
           <p className="text-white/60 text-base md:text-lg font-medium leading-relaxed max-w-2xl">
-            A track record of expanding my expertise across cloud computing, machine learning, and modern software engineering.
+            A complete record of certifications, training programs, and hackathon achievements spanning cloud computing, data science, machine learning, and software engineering.
           </p>
         </div>
 
         {/* Certifications Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {certifications.map((cert, idx) => (
-            <div 
+            <div
               key={idx}
-              data-aos="fade-up"
-              data-aos-delay={100 * (idx + 1)}
               className="group relative bg-neutral-900/50 rounded-[2rem] p-8 border border-neutral-800 hover:border-[#ff2a2a]/50 shadow-md hover:shadow-[0_15px_40px_rgba(255,42,42,0.15)] transition-all duration-500 hover:-translate-y-2 flex flex-col justify-between"
             >
               {/* Background accent on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#ff2a2a]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[2rem] pointer-events-none"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-[#ff2a2a]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-[2rem] pointer-events-none" />
 
               <div className="relative z-10">
                 <div className="mb-6 p-4 bg-black/40 rounded-2xl inline-block group-hover:scale-110 transition-transform duration-500 border border-neutral-800">
                   {cert.icon}
                 </div>
-                
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-[#ff2a2a] transition-colors duration-300">
                   {cert.title}
                 </h3>
-                
                 <p className="text-white/50 font-medium mb-1">
                   {cert.issuer}
                 </p>
@@ -151,8 +150,7 @@ const Certifications = () => {
                 <span className="text-sm font-bold text-white/40">
                   {cert.date}
                 </span>
-                
-                <a 
+                <a
                   href={cert.credentialUrl}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -168,23 +166,9 @@ const Certifications = () => {
           ))}
         </div>
 
-        {/* View All Certifications Button */}
-        <div className="mt-20 flex justify-end">
-          <Link
-            to="/certifications"
-            className="group relative inline-flex items-center gap-3 px-8 py-4 bg-transparent border border-neutral-700 text-white rounded-full font-bold overflow-hidden transition-all duration-500 hover:border-[#ff2a2a] hover:shadow-[0_0_30px_rgba(255,42,42,0.2)]"
-          >
-            <div className="absolute inset-0 bg-gradient-to-r from-[#ff2a2a] to-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0" />
-            <span className="relative z-10">View All Certifications</span>
-            <svg className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
-          </Link>
-        </div>
-
       </div>
-    </section>
+    </div>
   );
 };
 
-export default Certifications;
+export default AllCertificationsPage;

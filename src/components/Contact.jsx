@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 
 const Contact = () => {
   const ref = useRef(null);
@@ -9,7 +9,9 @@ const Contact = () => {
   });
   
   // Parallax translation for the big text
-  const y = useTransform(scrollYProgress, [0, 1], ["-20%", "30%"]);
+  const yRaw = useTransform(scrollYProgress, [0, 1], ["-20%", "30%"]);
+  // Apply a smooth spring transition to eliminate scroll scroll jitter/glitching
+  const y = useSpring(yRaw, { stiffness: 80, damping: 25, restDelta: 0.001 });
 
   // Form State
   const [formData, setFormData] = useState({

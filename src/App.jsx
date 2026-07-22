@@ -10,6 +10,7 @@ import Certifications from './components/Certifications'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import AllProjectsPage from './components/AllProjectsPage'
+import AllCertificationsPage from './components/AllCertificationsPage'
 
 // Disable browser's automatic scroll restoration
 if (typeof window !== 'undefined' && 'scrollRestoration' in window.history) {
@@ -67,6 +68,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<AllProjectsPage />} />
+        <Route path="/certifications" element={<AllCertificationsPage />} />
       </Routes>
       <Footer />
     </Router>
