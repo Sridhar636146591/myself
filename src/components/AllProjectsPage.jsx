@@ -13,6 +13,8 @@ const AllProjectsPage = () => {
       techStack: ["Python", "Ethereum Web3", "AI/ML Detection", "Data Pipelines"],
       linkText: "BizTech Winner 2026",
       link: "https://www.linkedin.com/posts/sridhar-s-2b9670350_presidencyuniversity-web3-blockchain-activity-7453059626570514432-94bD?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFepwK0BzInejhLiWDBGEvk4EfaNt6fOHMQ",
+      certificateLink: "/certificates/biztech.pdf",
+      certificateLinkText: "View Certificate",
       featured: true
     },
     {
@@ -35,6 +37,8 @@ const AllProjectsPage = () => {
       techStack: ["Python", "Google Cloud AI", "Logistics Analytics", "Render Cloud"],
       linkText: "Live Application",
       link: "https://supply-chain-zbfw.onrender.com/",
+      certificateLink: "/certificates/hack2skill.pdf",
+      certificateLinkText: "View Certificate",
       featured: false
     },
     {
@@ -46,6 +50,8 @@ const AllProjectsPage = () => {
       techStack: ["Python", "Machine Learning", "Render Cloud", "Forensics"],
       linkText: "Live Application",
       link: "https://froud-detection-ej1p.onrender.com",
+      certificateLink: "/certificates/fusion x .PDF",
+      certificateLinkText: "View Certificate",
       featured: true
     },
     {
@@ -68,6 +74,8 @@ const AllProjectsPage = () => {
       techStack: ["Python", "REST APIs", "AI/ML Integration", "Render Cloud"],
       linkText: "Live Application",
       link: "https://biosync-health-app-1.onrender.com",
+      certificateLink: "/certificates/web.pdf",
+      certificateLinkText: "View Certificate",
       featured: false
     },
     {
@@ -159,7 +167,7 @@ const AllProjectsPage = () => {
                 </div>
 
                 {/* Link */}
-                <div className="border-t border-neutral-800/60 pt-6 flex justify-between items-center">
+                <div className="border-t border-neutral-800/60 pt-6 flex flex-col items-start gap-3">
                   <a 
                     href={project.link}
                     target={project.link !== "#" ? "_blank" : "_self"}
@@ -171,6 +179,20 @@ const AllProjectsPage = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                     </svg>
                   </a>
+
+                  {project.certificateLink && (
+                    <a 
+                      href={project.certificateLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 text-white/60 hover:text-[#ff2a2a] font-bold text-sm transition-colors duration-300"
+                    >
+                      <span>{project.certificateLinkText}</span>
+                      <svg className="w-4 h-4 text-[#ff2a2a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </a>
+                  )}
                 </div>
               </div>
 

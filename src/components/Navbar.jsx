@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { useLocation, Link } from 'react-router-dom';
+import { useLocation, Link, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
   const isHome = location.pathname === '/';
 
   // Handle scroll to make navbar more solid
@@ -61,15 +62,15 @@ const Navbar = () => {
         {/* Right Side: CTA Button & Back to Home */}
         <div className="hidden md:flex items-center gap-4">
           {!isHome && (
-            <Link 
-              to="/" 
-              className="px-6 py-2.5 rounded-full bg-[#ff2a2a]/10 border border-[#ff2a2a]/40 text-[#ff2a2a] font-bold hover:bg-[#ff2a2a] hover:text-white transition-all duration-300 shadow-[0_0_15px_rgba(255,42,42,0.15)] flex items-center gap-2"
+            <button 
+              onClick={() => navigate(-1)} 
+              className="px-6 py-2.5 rounded-full bg-[#ff2a2a]/10 border border-[#ff2a2a]/40 text-[#ff2a2a] font-bold hover:bg-[#ff2a2a] hover:text-white transition-all duration-300 shadow-[0_0_15px_rgba(255,42,42,0.15)] flex items-center gap-2 cursor-pointer"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
               </svg>
-              Back to Home
-            </Link>
+              Back
+            </button>
           )}
           <a 
             href={isHome ? "#contact" : "/#contact"}
@@ -124,18 +125,20 @@ const Navbar = () => {
                >
                  Hire Me
                </a>
-               {!isHome && (
-                 <Link 
-                   to="/" 
-                   onClick={() => setIsOpen(false)}
-                   className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#ff2a2a]/10 border border-[#ff2a2a]/40 text-[#ff2a2a] font-bold hover:bg-[#ff2a2a] hover:text-white transition-all duration-300 w-full shadow-[0_0_15px_rgba(255,42,42,0.15)]"
-                 >
-                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                   </svg>
-                   Back to Home
-                 </Link>
-               )}
+                {!isHome && (
+                  <button 
+                    onClick={() => {
+                      setIsOpen(false);
+                      navigate(-1);
+                    }}
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-[#ff2a2a]/10 border border-[#ff2a2a]/40 text-[#ff2a2a] font-bold hover:bg-[#ff2a2a] hover:text-white transition-all duration-300 w-full shadow-[0_0_15px_rgba(255,42,42,0.15)] cursor-pointer"
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                    </svg>
+                    Back
+                  </button>
+                )}
             </div>
           </div>
         </div>

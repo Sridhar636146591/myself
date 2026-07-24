@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, useLocation, useNavigationType } from 'react-router-dom'
 import Preloader from './components/Preloader'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
@@ -12,15 +12,29 @@ import Footer from './components/Footer'
 import AllProjectsPage from './components/AllProjectsPage'
 import AllCertificationsPage from './components/AllCertificationsPage'
 
-// Disable browser's automatic scroll restoration
+// Enable browser's automatic scroll restoration to remember recent positions on back navigation
 if (typeof window !== 'undefined' && 'scrollRestoration' in window.history) {
-  window.history.scrollRestoration = 'manual';
+  window.history.scrollRestoration = 'auto';
 }
 
 const ScrollToTop = () => {
   const { pathname, hash } = useLocation();
+  const navType = useNavigationType();
 
   useEffect(() => {
+    // If navigating back/forward (POP action), disable smooth scroll temporarily so the browser restores scroll position instantly
+    if (navType === 'POP') {
+      const html = document.documentElement;
+      html.style.scrollBehavior = 'auto';
+      
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          html.style.scrollBehavior = '';
+        });
+      });
+      return;
+    }
+
     if (hash) {
       setTimeout(() => {
         const element = document.querySelector(hash);
@@ -41,7 +55,7 @@ const ScrollToTop = () => {
         });
       });
     }
-  }, [pathname, hash]);
+  }, [pathname, hash, navType]);
 
   return null;
 }
