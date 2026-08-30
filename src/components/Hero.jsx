@@ -214,10 +214,10 @@ const Hero = () => {
         <div className="flex flex-col items-start text-left max-w-2xl w-full pointer-events-auto">
           <h1
             data-aos="fade-up"
-            className="text-[#0f172a] dark:text-white text-3xl md:text-5xl font-bold mb-4 tracking-tight"
+            className="text-slate-950 dark:text-white text-3xl md:text-5xl font-bold mb-4 tracking-tight drop-shadow-[0_2px_12px_rgba(248,250,252,0.95)] dark:drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]"
           >
             Hi, I'm <br />
-            <span className="text-transparent [-webkit-text-stroke:1px_#0f172a] dark:[-webkit-text-stroke:1px_white] md:[-webkit-text-stroke:1.5px_#0f172a] dark:md:[-webkit-text-stroke:1.5px_white]">
+            <span className="text-slate-950 dark:text-white [-webkit-text-stroke:1.5px_#0f172a] dark:[-webkit-text-stroke:1.5px_white] md:[-webkit-text-stroke:2px_#0f172a] dark:md:[-webkit-text-stroke:2px_white]">
               Sridhar S
             </span>
           </h1>
