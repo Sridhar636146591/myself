@@ -6,7 +6,7 @@ const Footer = () => {
   const isHome = location.pathname === '/';
 
   return (
-    <footer className="bg-[#111111] text-[#d4d4d4] py-16 px-6 md:px-12 w-full font-mono text-[10px] md:text-xs tracking-widest flex flex-col justify-between min-h-[50vh]">
+    <footer className="bg-[#0f172a] dark:bg-[#111111] text-slate-400 dark:text-[#d4d4d4] py-16 px-6 md:px-12 w-full font-mono text-[10px] md:text-xs tracking-widest flex flex-col justify-between min-h-[50vh] transition-colors duration-300">
       
       {/* Top Row */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 w-full font-medium">
@@ -18,7 +18,7 @@ const Footer = () => {
         
         <div className="flex flex-col gap-1 md:items-center">
           <p>Presidency University Student</p>
-          <a href={isHome ? "#projects" : "/#projects"} className="underline hover:text-white transition-colors mt-1 underline-offset-4 decoration-1">View Projects</a>
+          <a href={isHome ? "#projects" : "/#projects"} className="underline text-slate-300 hover:text-[#38bdf8] dark:text-slate-400 dark:hover:text-white transition-colors mt-1 underline-offset-4 decoration-1">View Projects</a>
         </div>
         
         <div className="flex flex-col gap-1 md:items-end">
@@ -29,7 +29,7 @@ const Footer = () => {
 
       {/* Middle Huge Text */}
       <div className="w-full flex justify-center items-center py-20 md:py-24 overflow-hidden">
-        <h2 className="text-[18vw] md:text-[16vw] leading-none font-sans font-bold tracking-tighter lowercase select-none text-[#f4f4f4] w-full text-center">
+        <h2 className="text-[18vw] md:text-[16vw] leading-none font-sans font-bold tracking-tighter lowercase select-none text-slate-800 dark:text-[#f4f4f4] w-full text-center transition-colors duration-300">
           sridhar s
         </h2>
       </div>
@@ -37,12 +37,12 @@ const Footer = () => {
       {/* Bottom Row */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 w-full items-end font-medium">
         <div className="flex flex-col gap-6">
-          <div className="flex flex-col gap-2">
-            <a href={isHome ? "#contact" : "/#contact"} className="underline hover:text-white transition-colors underline-offset-4 decoration-1 font-bold">Contact</a>
-            <a href="/Sridhar_S_Resume.pdf" target="_blank" rel="noopener noreferrer" className="underline hover:text-white transition-colors underline-offset-4 decoration-1 font-bold">View Resume (PDF)</a>
-            <a href="/Sridhar_S_Resume_Updated.docx" download className="underline hover:text-white transition-colors underline-offset-4 decoration-1 font-bold">Download Resume (Word)</a>
+          <div className="flex flex-col gap-2 font-bold">
+            <a href={isHome ? "#contact" : "/#contact"} className="underline text-slate-300 hover:text-[#38bdf8] dark:text-slate-400 dark:hover:text-white transition-colors underline-offset-4 decoration-1">Contact</a>
+            <a href="/Sridhar_S_Resume.pdf" target="_blank" rel="noopener noreferrer" className="underline text-slate-300 hover:text-[#38bdf8] dark:text-slate-400 dark:hover:text-white transition-colors underline-offset-4 decoration-1">View Resume (PDF)</a>
+            <a href="/Sridhar_S_Resume_Updated.docx" download className="underline text-slate-300 hover:text-[#38bdf8] dark:text-slate-400 dark:hover:text-white transition-colors underline-offset-4 decoration-1">Download Resume (Word)</a>
           </div>
-          <p className="text-white/60 font-mono text-[9px] md:text-[10px]">
+          <p className="text-slate-500 dark:text-white/60 font-mono text-[9px] md:text-[10px]">
             &copy; {new Date().getFullYear()} Sridhar S | Built with React
           </p>
         </div>
@@ -52,10 +52,10 @@ const Footer = () => {
           <a 
             href="mailto:sridharreddyrudra@gmail.com" 
             title="Gmail"
-            className="w-10 h-10 rounded-full bg-white/5 border border-white/10 text-[#d4d4d4] flex items-center justify-center hover:bg-white hover:text-black hover:scale-110 hover:shadow-[0_0_12px_rgba(255,255,255,0.3)] transition-all duration-300 cursor-pointer"
+            className="w-10 h-10 rounded-full bg-white/5 border border-white/10 text-slate-400 dark:text-[#d4d4d4] flex items-center justify-center hover:bg-[#06b6d4] hover:text-white hover:border-transparent dark:hover:bg-white dark:hover:text-black hover:scale-110 hover:shadow-[0_0_12px_rgba(255,255,255,0.3)] transition-all duration-300 cursor-pointer"
           >
             <svg className="w-4.5 h-4.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
             </svg>
           </a>
 
@@ -65,7 +65,7 @@ const Footer = () => {
             target="_blank" 
             rel="noopener noreferrer" 
             title="Instagram"
-            className="w-10 h-10 rounded-full bg-white/5 border border-white/10 text-[#d4d4d4] flex items-center justify-center hover:bg-white hover:text-black hover:scale-110 hover:shadow-[0_0_12px_rgba(255,255,255,0.3)] transition-all duration-300 cursor-pointer"
+            className="w-10 h-10 rounded-full bg-white/5 border border-white/10 text-slate-400 dark:text-[#d4d4d4] flex items-center justify-center hover:bg-[#06b6d4] hover:text-white hover:border-transparent dark:hover:bg-white dark:hover:text-black hover:scale-110 hover:shadow-[0_0_12px_rgba(255,255,255,0.3)] transition-all duration-300 cursor-pointer"
           >
             <svg className="w-4.5 h-4.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
               <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
@@ -80,7 +80,7 @@ const Footer = () => {
             target="_blank" 
             rel="noopener noreferrer" 
             title="LinkedIn"
-            className="w-10 h-10 rounded-full bg-white/5 border border-white/10 text-[#d4d4d4] flex items-center justify-center hover:bg-white hover:text-black hover:scale-110 hover:shadow-[0_0_12px_rgba(255,255,255,0.3)] transition-all duration-300 cursor-pointer"
+            className="w-10 h-10 rounded-full bg-white/5 border border-white/10 text-slate-400 dark:text-[#d4d4d4] flex items-center justify-center hover:bg-[#06b6d4] hover:text-white hover:border-transparent dark:hover:bg-white dark:hover:text-black hover:scale-110 hover:shadow-[0_0_12px_rgba(255,255,255,0.3)] transition-all duration-300 cursor-pointer"
           >
             <svg className="w-4.5 h-4.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
@@ -94,7 +94,7 @@ const Footer = () => {
             target="_blank" 
             rel="noopener noreferrer" 
             title="GitHub"
-            className="w-10 h-10 rounded-full bg-white/5 border border-white/10 text-[#d4d4d4] flex items-center justify-center hover:bg-white hover:text-black hover:scale-110 hover:shadow-[0_0_12px_rgba(255,255,255,0.3)] transition-all duration-300 cursor-pointer"
+            className="w-10 h-10 rounded-full bg-white/5 border border-white/10 text-slate-400 dark:text-[#d4d4d4] flex items-center justify-center hover:bg-[#06b6d4] hover:text-white hover:border-transparent dark:hover:bg-white dark:hover:text-black hover:scale-110 hover:shadow-[0_0_12px_rgba(255,255,255,0.3)] transition-all duration-300 cursor-pointer"
           >
             <svg className="w-4.5 h-4.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" />
@@ -103,7 +103,7 @@ const Footer = () => {
         </div>
         
         <div className="flex flex-col gap-1 md:items-end">
-          <a href="#" className="underline hover:text-white transition-colors underline-offset-4 decoration-1">Privacy Policy</a>
+          <a href="#" className="underline text-slate-300 hover:text-[#38bdf8] dark:text-slate-400 dark:hover:text-white transition-colors underline-offset-4 decoration-1">Privacy Policy</a>
         </div>
       </div>
     </footer>

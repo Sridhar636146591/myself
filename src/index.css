@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@variant dark (&:where(.dark, .dark *));
+
 @theme {
   --animate-float: float 6s ease-in-out infinite;
 
@@ -16,6 +18,12 @@ html {
 body {
   margin: 0;
   padding: 0;
+  background-color: #f8fafc;
+  color: #334155;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark {
   background-color: #000;
   color: #fff;
 }

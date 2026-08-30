@@ -69,22 +69,22 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="bg-black py-28 px-6 md:px-12 w-full text-white relative overflow-hidden font-sans">
+    <section id="projects" className="bg-slate-50 dark:bg-black py-28 px-6 md:px-12 w-full text-slate-800 dark:text-white relative overflow-hidden font-sans transition-colors duration-300">
       {/* Background radial glow */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#ff2a2a]/10 rounded-full blur-[120px] pointer-events-none"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-red-950/10 rounded-full blur-[120px] pointer-events-none"></div>
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#38bdf8]/10 dark:bg-[#ff2a2a]/10 rounded-full blur-[140px] pointer-events-none"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#06b6d4]/10 dark:bg-red-950/10 rounded-full blur-[140px] pointer-events-none"></div>
 
       <div className="max-w-6xl mx-auto relative z-10">
         
         {/* Header */}
         <div data-aos="fade-up" className="mb-20 max-w-2xl">
-          <div className="inline-block border border-[#ff2a2a]/40 rounded-full px-5 py-1.5 text-xs text-[#ff2a2a] font-black uppercase tracking-widest mb-6 bg-[#ff2a2a]/5 shadow-[0_0_15px_rgba(255,42,42,0.1)]">
+          <div className="inline-block border border-slate-200 dark:border-[#ff2a2a]/40 rounded-full px-5 py-1.5 text-xs text-slate-600 dark:text-[#ff2a2a] font-black uppercase tracking-widest mb-6 bg-white dark:bg-[#ff2a2a]/5 shadow-sm dark:shadow-[0_0_15px_rgba(255,42,42,0.1)]">
             My Projects
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 tracking-tight leading-none text-white">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 tracking-tight leading-none text-[#0f172a] dark:text-white">
             Innovations & Built Solutions
           </h2>
-          <p className="text-white/60 text-base md:text-lg font-medium leading-relaxed">
+          <p className="text-slate-500 dark:text-white/60 text-base md:text-lg font-medium leading-relaxed">
             Applying machine learning models, decentralized ledger analytics, and cloud orchestration to solve complex real-world challenges.
           </p>
         </div>
@@ -98,38 +98,38 @@ const Projects = () => {
               data-aos-delay={100 * (idx + 1)}
               className={`group relative rounded-[2rem] p-8 md:p-10 border transition-all duration-500 overflow-hidden flex flex-col justify-between min-h-[460px] ${
                 project.featured 
-                  ? 'bg-gradient-to-br from-neutral-900 via-neutral-950 to-neutral-900 border-[#ff2a2a]/30 hover:border-[#ff2a2a]/80 shadow-[0_20px_50px_rgba(0,0,0,0.5)] hover:shadow-[0_20px_50px_rgba(255,42,42,0.15)]' 
-                  : 'bg-neutral-950/80 border-neutral-800 hover:border-neutral-700 shadow-md hover:shadow-lg'
+                  ? 'bg-white border-slate-200 hover:border-[#38bdf8]/50 shadow-[0_15px_40px_rgba(14,165,233,0.08)] hover:shadow-[0_20px_50px_rgba(14,165,233,0.15)] dark:bg-gradient-to-br dark:from-neutral-900 dark:via-neutral-950 dark:to-neutral-900 dark:border-[#ff2a2a]/30 dark:hover:border-[#ff2a2a]/80 dark:shadow-[0_20px_50px_rgba(0,0,0,0.5)] dark:hover:shadow-[0_20px_50px_rgba(255,42,42,0.15)]' 
+                  : 'bg-white border border-slate-200 hover:border-slate-300 shadow-[0_10px_30px_rgba(14,165,233,0.04)] hover:shadow-[0_15px_40px_rgba(14,165,233,0.08)] dark:bg-neutral-950/80 dark:border-neutral-800 dark:hover:border-neutral-700 dark:shadow-md dark:hover:shadow-lg'
               }`}
             >
               {/* Top corner gradient glow */}
-              <div className="absolute -top-10 -right-10 w-40 h-40 bg-[#ff2a2a]/5 rounded-full blur-2xl group-hover:bg-[#ff2a2a]/15 transition-all duration-500 pointer-events-none"></div>
+              <div className="absolute -top-10 -right-10 w-40 h-40 bg-[#38bdf8]/5 group-hover:bg-[#38bdf8]/15 dark:bg-[#ff2a2a]/5 dark:group-hover:bg-[#ff2a2a]/15 transition-all duration-500 pointer-events-none"></div>
 
               <div>
                 {/* Meta details */}
                 <div className="flex justify-between items-center mb-6">
-                  <span className="text-xs font-bold uppercase tracking-widest text-[#ff2a2a]">
+                  <span className="text-xs font-bold uppercase tracking-widest text-[#06b6d4] dark:text-[#ff2a2a]">
                     {project.category}
                   </span>
-                  <span className="text-xs text-white/40 font-mono">
+                  <span className="text-xs text-slate-400 dark:text-white/40 font-mono">
                     {project.date}
                   </span>
                 </div>
 
                 {/* Award Badge if exists */}
                 {project.award && (
-                  <div className="mb-5 inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-yellow-500/10 border border-yellow-500/20 text-yellow-400 text-xs font-bold leading-tight">
+                  <div className="mb-5 inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-yellow-500/10 border border-yellow-500/20 text-yellow-600 dark:text-yellow-400 text-xs font-bold leading-tight">
                     {project.award}
                   </div>
                 )}
 
                 {/* Title */}
-                <h3 className="text-2xl md:text-3xl font-black mb-4 tracking-tight text-white group-hover:text-[#ff2a2a] transition-colors duration-300">
+                <h3 className="text-2xl md:text-3xl font-black mb-4 tracking-tight text-[#0f172a] dark:text-white group-hover:text-[#06b6d4] dark:group-hover:text-[#ff2a2a] transition-colors duration-300">
                   {project.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-white/60 text-sm md:text-base leading-relaxed mb-8 font-medium">
+                <p className="text-slate-600 dark:text-white/60 text-sm md:text-base leading-relaxed mb-8 font-medium">
                   {project.description}
                 </p>
               </div>
@@ -141,7 +141,7 @@ const Projects = () => {
                   {project.techStack.map((tech, tIdx) => (
                     <span 
                       key={tIdx}
-                      className="px-3.5 py-1.5 rounded-full bg-neutral-900 text-white/75 text-[11px] font-semibold border border-neutral-800 font-mono"
+                      className="px-3.5 py-1.5 rounded-full bg-slate-100 dark:bg-neutral-900 text-slate-700 dark:text-white/75 text-[11px] font-semibold border border-slate-200 dark:border-neutral-800 font-mono"
                     >
                       {tech}
                     </span>
@@ -149,15 +149,15 @@ const Projects = () => {
                 </div>
 
                 {/* Link */}
-                <div className="border-t border-neutral-800/60 pt-6 flex items-center justify-between gap-6">
+                <div className="border-t border-slate-100 dark:border-neutral-800/60 pt-6 flex items-center justify-between gap-6">
                   <a 
                     href={project.link}
                     target={project.link !== "#" ? "_blank" : "_self"}
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-white font-bold text-sm group-hover:translate-x-1 transition-transform duration-300"
+                    className="inline-flex items-center gap-2 text-slate-800 dark:text-white font-bold text-sm group-hover:translate-x-1 transition-transform duration-300"
                   >
-                    <span className="group-hover:text-[#ff2a2a] transition-colors">{project.linkText}</span>
-                    <svg className="w-4 h-4 text-[#ff2a2a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <span className="group-hover:text-[#06b6d4] dark:group-hover:text-[#ff2a2a] transition-colors">{project.linkText}</span>
+                    <svg className="w-4 h-4 text-[#06b6d4] dark:text-[#ff2a2a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                     </svg>
                   </a>
@@ -167,10 +167,10 @@ const Projects = () => {
                       href={project.certificateLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 text-white/60 hover:text-[#ff2a2a] font-bold text-sm transition-colors duration-300 ml-auto"
+                      className="inline-flex items-center gap-2 text-slate-500 hover:text-[#06b6d4] dark:text-white/60 dark:hover:text-[#ff2a2a] font-bold text-sm transition-colors duration-300 ml-auto"
                     >
                       <span>{project.certificateLinkText}</span>
-                      <svg className="w-4 h-4 text-[#ff2a2a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-4 h-4 text-[#06b6d4] dark:text-[#ff2a2a]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                       </svg>
                     </a>
@@ -186,11 +186,11 @@ const Projects = () => {
         <div data-aos="fade-up" className="mt-20 flex justify-end">
           <Link 
             to="/projects"
-            className="group relative inline-flex items-center gap-3 px-8 py-4 bg-transparent border border-neutral-700 text-white rounded-full font-bold overflow-hidden transition-all duration-500 hover:border-[#ff2a2a] hover:shadow-[0_0_30px_rgba(255,42,42,0.2)]"
+            className="group relative inline-flex items-center gap-3 px-8 py-4 bg-transparent border border-slate-300 dark:border-neutral-700 text-slate-800 dark:text-white rounded-full font-bold overflow-hidden transition-all duration-500 hover:border-[#06b6d4] dark:hover:border-[#ff2a2a] hover:shadow-[0_15px_30px_rgba(14,165,233,0.15)] dark:hover:shadow-[0_0_30px_rgba(255,42,42,0.2)]"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-[#ff2a2a] to-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0"></div>
-            <span className="relative z-10">View All Projects</span>
-            <svg className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="absolute inset-0 bg-gradient-to-r from-[#38bdf8] to-[#06b6d4] dark:from-[#ff2a2a] dark:to-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0"></div>
+            <span className="relative z-10 group-hover:text-white">View All Projects</span>
+            <svg className="w-5 h-5 relative z-10 group-hover:translate-x-1 group-hover:text-white transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
             </svg>
           </Link>

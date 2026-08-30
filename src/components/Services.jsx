@@ -31,28 +31,30 @@ const TagCard = ({ number, title, text, className, aosDelay, aosType, pathLength
       data-aos={aosType || "fade-up"} 
       data-aos-delay={aosDelay}
       className={`w-72 sm:w-80 rounded-[2rem] p-2 relative flex flex-col items-center hover:scale-[1.02] transition-all duration-700 z-10 ${className} ${
-        isActive ? 'bg-[#ff2a2a] border-red-400 shadow-[0_20px_50px_rgba(255,42,42,0.4)]' : 'bg-white border border-gray-200 shadow-[0_15px_40px_rgba(0,0,0,0.06)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)]'
+        isActive 
+          ? 'bg-gradient-to-br from-[#38bdf8] to-[#06b6d4] dark:from-[#ff2a2a] dark:to-[#ff2a2a] border-transparent shadow-[0_15px_40px_rgba(14,165,233,0.3)] dark:shadow-[0_20px_50px_rgba(255,42,42,0.4)]' 
+          : 'bg-white border border-slate-200 dark:bg-neutral-900 dark:border-neutral-800 shadow-[0_15px_40px_rgba(14,165,233,0.06)] hover:shadow-[0_20px_50px_rgba(14,165,233,0.12)]'
       }`}
     >
       {/* The hole punch */}
-      <div className="w-5 h-5 bg-gradient-to-br from-gray-300 to-gray-100 rounded-full shadow-[inset_0_2px_4px_rgba(0,0,0,0.3)] absolute top-4 border border-gray-300 z-10 flex items-center justify-center">
+      <div className="w-5 h-5 bg-gradient-to-br from-gray-300 to-gray-100 dark:from-neutral-700 dark:to-neutral-900 rounded-full shadow-[inset_0_2px_4px_rgba(0,0,0,0.15)] dark:shadow-[inset_0_2px_4px_rgba(0,0,0,0.4)] absolute top-4 border border-slate-300 dark:border-neutral-700 z-10 flex items-center justify-center">
         <div className="w-2 h-2 bg-gray-800 rounded-full opacity-20"></div>
       </div>
       
       {/* Inner container */}
       <div className={`w-full h-full rounded-[1.5rem] mt-8 p-8 flex flex-col min-h-[220px] transition-colors duration-700 ${
-        isActive ? 'bg-red-700/50' : 'bg-[#f4f4f4]'
+        isActive ? 'bg-white/20 backdrop-blur-md dark:bg-red-700/50' : 'bg-slate-50 dark:bg-black/35'
       }`}>
         <span className={`text-xl font-bold mb-2 font-serif italic transition-colors duration-700 ${
-          isActive ? 'text-red-200' : 'text-gray-400'
+          isActive ? 'text-white/80 dark:text-red-200' : 'text-slate-400 dark:text-neutral-500'
         }`}>{number}</span>
         
         <h3 className={`text-2xl font-black mb-3 tracking-tight transition-colors duration-700 ${
-          isActive ? 'text-white' : 'text-gray-900'
+          isActive ? 'text-white' : 'text-slate-900 dark:text-white'
         }`}>{title}</h3>
         
         <p className={`text-sm leading-relaxed font-medium transition-colors duration-700 ${
-          isActive ? 'text-red-100' : 'text-gray-500'
+          isActive ? 'text-white/95 dark:text-red-100' : 'text-slate-600 dark:text-white/60'
         }`}>
           {text}
         </p>
@@ -75,19 +77,19 @@ const Services = () => {
     <section 
       id="services"
       ref={containerRef}
-      className="bg-white pt-24 pb-48 px-6 md:px-12 w-full relative overflow-hidden font-sans bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:80px_80px]"
+      className="bg-white dark:bg-black pt-24 pb-48 px-6 md:px-12 w-full relative overflow-hidden font-sans transition-colors duration-300 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:80px_80px]"
     >
       <div className="max-w-6xl mx-auto">
         
-        {/* Header Content - Rendered as static block at the top to prevent overlapping */}
+         {/* Header Content */}
         <div data-aos="fade-up" className="mb-20 max-w-3xl">
-          <div className="inline-block border border-gray-300 rounded-full px-5 py-1.5 text-sm text-gray-600 font-bold mb-6 shadow-sm bg-white">
+          <div className="inline-block border border-slate-200 dark:border-neutral-800 rounded-full px-5 py-1.5 text-sm text-slate-600 dark:text-neutral-400 font-bold mb-6 shadow-sm bg-white dark:bg-neutral-900">
             My Expertise
           </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-gray-900 leading-[1.1] mb-6 tracking-tight relative">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 dark:text-white leading-[1.1] mb-6 tracking-tight relative">
             Engineering intelligent, data-driven systems
           </h2>
-          <p className="text-gray-500 text-base md:text-lg font-medium leading-relaxed max-w-2xl">
+          <p className="text-slate-500 dark:text-white/60 text-base md:text-lg font-medium leading-relaxed max-w-2xl">
             I follow a structured, scientific, and highly technical approach to turn complex datasets and ideas into secure, production-ready systems.
           </p>
         </div>
@@ -108,6 +110,7 @@ const Services = () => {
               stroke="#cbd5e1" 
               strokeWidth="2" 
               strokeDasharray="8 10" 
+              className="stroke-slate-200 dark:stroke-neutral-800"
             />
 
             {/* Mask to reveal the dashed path based on scroll */}
@@ -125,11 +128,11 @@ const Services = () => {
             <path 
               d="M 650,50 C 400,150 200,250 300,500 C 400,700 750,650 700,800 C 650,1000 400,1000 300,1100 C 200,1200 400,1300 700,1400 C 800,1500 500,1600 300,1700 C 200,1800 400,1900 600,2000" 
               fill="none" 
-              stroke="black" 
+              stroke="#06b6d4" 
               strokeWidth="2" 
               strokeDasharray="8 10" 
               mask="url(#path-mask)"
-              className="drop-shadow-sm"
+              className="drop-shadow-sm stroke-[#06b6d4] dark:stroke-[#ff2a2a]"
             />
           </svg>
 
@@ -146,6 +149,7 @@ const Services = () => {
               strokeWidth="4" 
               strokeDasharray="4 6" 
               vectorEffect="non-scaling-stroke"
+              className="stroke-slate-200 dark:stroke-neutral-800"
             />
             <mask id="path-mask-mobile">
               <motion.path 
@@ -160,11 +164,12 @@ const Services = () => {
             <path 
               d="M 2,0 L 2,100" 
               fill="none" 
-              stroke="black" 
+              stroke="#06b6d4" 
               strokeWidth="4" 
               strokeDasharray="4 6" 
               mask="url(#path-mask-mobile)"
               vectorEffect="non-scaling-stroke"
+              className="stroke-[#06b6d4] dark:stroke-[#ff2a2a]"
             />
           </svg>
 
@@ -252,7 +257,7 @@ const Services = () => {
             <div 
               data-aos="fade-in" 
               data-aos-delay="800"
-              className="hidden md:block absolute top-[2020px] left-[20%] lg:left-[30%] font-['Caveat',cursive] text-3xl text-gray-600 -rotate-6"
+              className="hidden md:block absolute top-[2020px] left-[20%] lg:left-[30%] font-['Caveat',cursive] text-3xl text-slate-500 dark:text-neutral-400 -rotate-6"
             >
               Ready to innovate!
             </div>

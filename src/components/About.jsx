@@ -165,48 +165,48 @@ const About = () => {
     {
       title: "Machine Learning & Data Science",
       items: [
-        { name: 'Python', color: 'hover:border-yellow-400/50 hover:shadow-[0_15px_30px_rgba(234,179,8,0.25)] text-yellow-400', icon: pythonIcon },
-        { name: 'Pandas', color: 'hover:border-indigo-400/50 hover:shadow-[0_15px_30px_rgba(99,102,241,0.25)] text-indigo-400', icon: pandasIcon },
-        { name: 'NumPy', color: 'hover:border-teal-400/50 hover:shadow-[0_15px_30px_rgba(20,184,166,0.25)] text-teal-400', icon: numpyIcon },
-        { name: 'SQL', color: 'hover:border-cyan-400/50 hover:shadow-[0_15px_30px_rgba(6,182,212,0.25)] text-cyan-400', icon: sqlIcon },
-        { name: 'Data Preprocessing', color: 'hover:border-amber-400/50 hover:shadow-[0_15px_30px_rgba(245,158,11,0.25)] text-amber-400', icon: preprocessIcon },
-        { name: 'Data Analysis', color: 'hover:border-emerald-400/50 hover:shadow-[0_15px_30px_rgba(16,185,129,0.25)] text-emerald-400', icon: analysisIcon },
-        { name: 'Feature Engineering', color: 'hover:border-rose-400/50 hover:shadow-[0_15px_30px_rgba(244,63,94,0.25)] text-rose-400', icon: featureIcon },
-        { name: 'Model Deployment', color: 'hover:border-violet-400/50 hover:shadow-[0_15px_30px_rgba(139,92,246,0.25)] text-violet-400', icon: deployIcon }
+        { name: 'Python', color: 'hover:border-yellow-400/50 hover:shadow-[0_15px_30px_rgba(234,179,8,0.25)] text-yellow-600 dark:text-yellow-400', icon: pythonIcon },
+        { name: 'Pandas', color: 'hover:border-indigo-400/50 hover:shadow-[0_15px_30px_rgba(99,102,241,0.25)] text-indigo-600 dark:text-indigo-400', icon: pandasIcon },
+        { name: 'NumPy', color: 'hover:border-teal-400/50 hover:shadow-[0_15px_30px_rgba(20,184,166,0.25)] text-teal-600 dark:text-teal-400', icon: numpyIcon },
+        { name: 'SQL', color: 'hover:border-cyan-400/50 hover:shadow-[0_15px_30px_rgba(6,182,212,0.25)] text-cyan-600 dark:text-cyan-400', icon: sqlIcon },
+        { name: 'Data Preprocessing', color: 'hover:border-amber-400/50 hover:shadow-[0_15px_30px_rgba(245,158,11,0.25)] text-amber-600 dark:text-amber-400', icon: preprocessIcon },
+        { name: 'Data Analysis', color: 'hover:border-emerald-400/50 hover:shadow-[0_15px_30px_rgba(16,185,129,0.25)] text-emerald-600 dark:text-emerald-400', icon: analysisIcon },
+        { name: 'Feature Engineering', color: 'hover:border-rose-400/50 hover:shadow-[0_15px_30px_rgba(244,63,94,0.25)] text-rose-600 dark:text-rose-400', icon: featureIcon },
+        { name: 'Model Deployment', color: 'hover:border-violet-400/50 hover:shadow-[0_15px_30px_rgba(139,92,246,0.25)] text-violet-600 dark:text-violet-400', icon: deployIcon }
       ]
     },
     {
       title: "Programming Languages",
       items: [
-        { name: 'Python', color: 'hover:border-yellow-400/50 hover:shadow-[0_15px_30px_rgba(234,179,8,0.25)] text-yellow-400', icon: pythonIcon },
-        { name: 'Java', color: 'hover:border-orange-400/50 hover:shadow-[0_15px_30px_rgba(249,115,22,0.25)] text-orange-400', icon: javaIcon },
-        { name: 'C', color: 'hover:border-sky-400/50 hover:shadow-[0_15px_30px_rgba(14,165,233,0.25)] text-sky-400', icon: cIcon }
+        { name: 'Python', color: 'hover:border-yellow-400/50 hover:shadow-[0_15px_30px_rgba(234,179,8,0.25)] text-yellow-600 dark:text-yellow-400', icon: pythonIcon },
+        { name: 'Java', color: 'hover:border-orange-400/50 hover:shadow-[0_15px_30px_rgba(249,115,22,0.25)] text-orange-600 dark:text-orange-400', icon: javaIcon },
+        { name: 'C', color: 'hover:border-sky-400/50 hover:shadow-[0_15px_30px_rgba(14,165,233,0.25)] text-sky-600 dark:text-sky-400', icon: cIcon }
       ]
     },
     {
       title: "Web Development",
       items: [
-        { name: 'HTML', color: 'hover:border-orange-500/50 hover:shadow-[0_15px_30px_rgba(249,115,22,0.25)] text-orange-500', icon: htmlIcon },
-        { name: 'CSS', color: 'hover:border-blue-500/50 hover:shadow-[0_15px_30px_rgba(59,130,246,0.25)] text-blue-500', icon: cssIcon },
-        { name: 'JavaScript', color: 'hover:border-yellow-300/50 hover:shadow-[0_15px_30px_rgba(253,224,71,0.25)] text-yellow-300', icon: jsIcon },
-        { name: 'PHP', color: 'hover:border-indigo-400/50 hover:shadow-[0_15px_30px_rgba(129,140,248,0.25)] text-indigo-400', icon: phpIcon },
-        { name: 'MySQL', color: 'hover:border-cyan-400/50 hover:shadow-[0_15px_30px_rgba(34,211,238,0.25)] text-cyan-400', icon: sqlIcon }
+        { name: 'HTML', color: 'hover:border-orange-500/50 hover:shadow-[0_15px_30px_rgba(249,115,22,0.25)] text-orange-600 dark:text-orange-500', icon: htmlIcon },
+        { name: 'CSS', color: 'hover:border-blue-500/50 hover:shadow-[0_15px_30px_rgba(59,130,246,0.25)] text-blue-600 dark:text-blue-500', icon: cssIcon },
+        { name: 'JavaScript', color: 'hover:border-yellow-300/50 hover:shadow-[0_15px_30px_rgba(253,224,71,0.25)] text-yellow-600 dark:text-yellow-300', icon: jsIcon },
+        { name: 'PHP', color: 'hover:border-indigo-400/50 hover:shadow-[0_15px_30px_rgba(129,140,248,0.25)] text-indigo-600 dark:text-indigo-400', icon: phpIcon },
+        { name: 'MySQL', color: 'hover:border-cyan-400/50 hover:shadow-[0_15px_30px_rgba(34,211,238,0.25)] text-cyan-600 dark:text-cyan-400', icon: sqlIcon }
       ]
     },
     {
       title: "Areas of Interest",
       items: [
-        { name: 'Generative AI', color: 'hover:border-rose-400/50 hover:shadow-[0_15px_30px_rgba(244,63,94,0.25)] text-rose-400', icon: aiIcon },
-        { name: 'Machine Learning', color: 'hover:border-violet-400/50 hover:shadow-[0_15px_30px_rgba(167,139,250,0.25)] text-violet-400', icon: mlIcon },
-        { name: 'Data Science', color: 'hover:border-emerald-400/50 hover:shadow-[0_15px_30px_rgba(52,211,153,0.25)] text-emerald-400', icon: dsIcon },
-        { name: 'Blockchain', color: 'hover:border-amber-400/50 hover:shadow-[0_15px_30px_rgba(251,191,36,0.25)] text-amber-400', icon: blockchainIcon },
-        { name: 'Full-Stack Development', color: 'hover:border-cyan-400/50 hover:shadow-[0_15px_30px_rgba(34,211,238,0.25)] text-cyan-400', icon: fullstackIcon }
+        { name: 'Generative AI', color: 'hover:border-rose-400/50 hover:shadow-[0_15px_30px_rgba(244,63,94,0.25)] text-rose-600 dark:text-rose-400', icon: aiIcon },
+        { name: 'Machine Learning', color: 'hover:border-violet-400/50 hover:shadow-[0_15px_30px_rgba(167,139,250,0.25)] text-violet-600 dark:text-violet-400', icon: mlIcon },
+        { name: 'Data Science', color: 'hover:border-emerald-400/50 hover:shadow-[0_15px_30px_rgba(52,211,153,0.25)] text-emerald-600 dark:text-emerald-400', icon: dsIcon },
+        { name: 'Blockchain', color: 'hover:border-amber-400/50 hover:shadow-[0_15px_30px_rgba(251,191,36,0.25)] text-amber-600 dark:text-amber-400', icon: blockchainIcon },
+        { name: 'Full-Stack Development', color: 'hover:border-cyan-400/50 hover:shadow-[0_15px_30px_rgba(34,211,238,0.25)] text-cyan-600 dark:text-cyan-400', icon: fullstackIcon }
       ]
     }
   ];
 
   return (
-    <section id="about" className="bg-[#ff2a2a] pt-20 pb-40 px-6 md:px-12 w-full relative overflow-hidden font-sans">
+    <section id="about" className="bg-slate-50 dark:bg-[#ff2a2a] pt-20 pb-40 px-6 md:px-12 w-full relative overflow-hidden font-sans transition-colors duration-300">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-16 items-start">
         
          {/* Left Side: ID Badge and Skills */}
@@ -214,18 +214,18 @@ const About = () => {
           
           <div data-aos="drop-bounce" className="relative flex justify-center w-full">
             {/* Lanyard string */}
-            <div className="absolute -top-32 left-1/2 w-3 h-40 bg-black transform -translate-x-1/2 shadow-inner z-0"></div>
+            <div className="absolute -top-32 left-1/2 w-3 h-40 bg-slate-300 dark:bg-black transform -translate-x-1/2 shadow-inner z-0"></div>
             {/* Lanyard clip */}
-            <div className="absolute -top-6 left-1/2 w-6 h-12 bg-gray-300 rounded border border-gray-400 transform -translate-x-1/2 z-10 shadow-[0_2px_10px_rgba(0,0,0,0.3)]"></div>
+            <div className="absolute -top-6 left-1/2 w-6 h-12 bg-slate-200 rounded border border-slate-300 dark:bg-gray-300 dark:border-gray-400 transform -translate-x-1/2 z-10 shadow-sm dark:shadow-[0_2px_10px_rgba(0,0,0,0.3)]"></div>
             
             {/* Badge Card */}
-            <div className="bg-gray-900 w-full max-w-[280px] rounded-2xl p-3 shadow-[0_20px_40px_rgba(0,0,0,0.4)] relative z-20 transform -rotate-3 hover:rotate-0 transition-transform duration-500">
+            <div className="bg-white border border-slate-200 dark:border-transparent dark:bg-gray-900 w-full max-w-[280px] rounded-2xl p-3 shadow-[0_15px_40px_rgba(14,165,233,0.08)] dark:shadow-[0_20px_40px_rgba(0,0,0,0.4)] relative z-20 transform -rotate-3 hover:rotate-0 transition-all duration-500">
               {/* Cutout Hole */}
-              <div className="absolute -top-3 left-1/2 w-16 h-6 bg-gray-900 rounded-t-xl transform -translate-x-1/2 flex justify-center items-center">
-                <div className="w-8 h-2 bg-black/30 rounded-full shadow-inner"></div>
+              <div className="absolute -top-3 left-1/2 w-16 h-6 bg-white border-t border-l border-r border-slate-200 dark:bg-gray-900 dark:border-transparent rounded-t-xl transform -translate-x-1/2 flex justify-center items-center">
+                <div className="w-8 h-2 bg-slate-200 dark:bg-black/30 rounded-full shadow-inner"></div>
               </div>
               {/* Image Container */}
-              <div className="w-full aspect-[3/4] overflow-hidden rounded-xl bg-gray-800 border-2 border-transparent">
+              <div className="w-full aspect-[3/4] overflow-hidden rounded-xl bg-slate-100 dark:bg-gray-800 border-2 border-transparent">
                 <img 
                   src={stackImage} 
                   alt="Sridhar S" 
@@ -238,12 +238,12 @@ const About = () => {
         </div>
 
         {/* Right Side: Info Content */}
-        <div data-aos="fade-left" data-aos-delay="200" className="flex-1 text-white mt-8 md:mt-0 relative z-20">
+        <div data-aos="fade-left" data-aos-delay="200" className="flex-1 text-[#334155] dark:text-white mt-8 md:mt-0 relative z-20">
           
-          <h2 className="text-4xl md:text-5xl font-black text-black mb-4">Hello!</h2>
-          <div className="text-lg font-bold leading-relaxed max-w-3xl text-red-50 space-y-6">
+          <h2 className="text-4xl md:text-5xl font-black text-[#0f172a] dark:text-black mb-4">Hello!</h2>
+          <div className="text-lg font-bold leading-relaxed max-w-3xl text-[#334155] dark:text-red-50 space-y-6">
             <p>
-              Hello, I'm <span className="text-black text-xl font-black mx-1 tracking-wide uppercase">Sridhar S</span>, currently pursuing a Bachelor of Technology in Computer Science with a specialization in Data Science at Presidency University. I am passionate about developing intelligent, data-driven solutions and leveraging technology to solve real-world problems.
+              Hello, I'm <span className="text-[#0f172a] dark:text-black text-xl font-black mx-1 tracking-wide uppercase">Sridhar S</span>, currently pursuing a Bachelor of Technology in Computer Science with a specialization in Data Science at Presidency University. I am passionate about developing intelligent, data-driven solutions and leveraging technology to solve real-world problems.
             </p>
             <p>
               My areas of interest span some of the most transformative technologies of our time, including Generative AI, Machine Learning, and Blockchain. Beyond learning these technologies, I actively build real-world applications that combine innovation, data, and automation to create meaningful impact.
@@ -252,11 +252,11 @@ const About = () => {
               I enjoy exploring emerging technologies, solving complex challenges, and continuously expanding my technical expertise through hands-on projects and practical experience. My goal is to develop scalable, intelligent solutions that bridge the gap between cutting-edge research and real-world applications.
             </p>
             <div>
-              <p className="mb-2 text-black text-lg font-extrabold uppercase tracking-wide">What I work on:</p>
-              <ul className="list-disc pl-5 space-y-2 text-red-50">
-                <li><strong className="text-black">Generative AI</strong> — Creating smart AI-powered applications that go beyond theory and solve actual problems.</li>
-                <li><strong className="text-black">Machine Learning & Analytics</strong> — Building models that learn from data and deliver actionable, meaningful insights.</li>
-                <li><strong className="text-black">Blockchain</strong> — Developing decentralized solutions that are secure, transparent, and built for the future.</li>
+              <p className="mb-2 text-[#0f172a] dark:text-black text-lg font-extrabold uppercase tracking-wide">What I work on:</p>
+              <ul className="list-disc pl-5 space-y-2 text-[#334155] dark:text-red-50">
+                <li><strong className="text-[#0f172a] dark:text-black">Generative AI</strong> — Creating smart AI-powered applications that go beyond theory and solve actual problems.</li>
+                <li><strong className="text-[#0f172a] dark:text-black">Machine Learning & Analytics</strong> — Building models that learn from data and deliver actionable, meaningful insights.</li>
+                <li><strong className="text-[#0f172a] dark:text-black">Blockchain</strong> — Developing decentralized solutions that are secure, transparent, and built for the future.</li>
               </ul>
             </div>
             <p>
@@ -267,9 +267,9 @@ const About = () => {
             </p>
 
             <div className="pt-4 pb-2">
-              <p className="mb-4 text-black text-lg font-black uppercase tracking-wider">Education:</p>
-              <div className="p-6 rounded-2xl bg-black/35 border border-white/10 backdrop-blur-md transition-all duration-300 transform hover:scale-[1.01] hover:border-red-400/30">
-                <div className="bg-white p-3 rounded-xl mb-4 flex justify-center items-center overflow-hidden border border-white/10 shadow-inner">
+              <p className="mb-4 text-[#0f172a] dark:text-black text-lg font-black uppercase tracking-wider">Education:</p>
+              <div className="p-6 rounded-2xl bg-white border border-[#38bdf8]/20 dark:bg-black/35 dark:border-white/10 shadow-[0_0_25px_rgba(14,165,233,0.15)] dark:shadow-[0_0_25px_rgba(239,68,68,0.15)] backdrop-blur-md transition-all duration-300 transform hover:scale-[1.01] hover:border-[#38bdf8]/50 dark:hover:border-red-400/40 hover:shadow-[0_0_35px_rgba(14,165,233,0.25)] dark:hover:shadow-[0_0_35px_rgba(239,68,68,0.25)]">
+                <div className="bg-slate-50 dark:bg-white p-3 rounded-xl mb-4 flex justify-center items-center overflow-hidden border border-slate-200 dark:border-white/10 shadow-inner">
                   <img 
                     src="/presidency_logo.png" 
                     alt="Presidency University Bengaluru" 
@@ -277,13 +277,13 @@ const About = () => {
                   />
                 </div>
                 <div className="text-left">
-                  <h3 className="text-white text-lg md:text-xl font-black tracking-tight mb-1">
+                  <h3 className="text-[#0f172a] dark:text-white text-lg md:text-xl font-black tracking-tight mb-1">
                     PRESIDENCY UNIVERSITY
                   </h3>
-                  <p className="text-red-200 text-xs md:text-sm font-black tracking-widest uppercase mb-2">
+                  <p className="text-[#06b6d4] dark:text-red-200 text-xs md:text-sm font-black tracking-widest uppercase mb-2">
                     BENGALURU
                   </p>
-                  <p className="text-white/70 text-xs md:text-sm font-bold leading-relaxed">
+                  <p className="text-slate-600 dark:text-white/70 text-xs md:text-sm font-bold leading-relaxed">
                     Bachelor of Technology in Computer Science with a specialization in Data Science
                   </p>
                 </div>
@@ -291,22 +291,22 @@ const About = () => {
             </div>
 
             <div className="pt-4 space-y-6">
-              <p className="mb-2 text-black text-lg font-black uppercase tracking-wider">Skills & Technologies:</p>
+              <p className="mb-2 text-[#0f172a] dark:text-black text-lg font-black uppercase tracking-wider">Skills & Technologies:</p>
               {skillCategories.map((category) => (
                 <div key={category.title} className="space-y-3">
-                  <h4 className="text-white text-xs font-black uppercase tracking-widest bg-black/20 px-3.5 py-1.5 rounded-lg inline-block border border-black/10">
+                  <h4 className="text-[#0f172a] dark:text-white text-xs font-black uppercase tracking-widest bg-slate-200/50 dark:bg-black/20 px-3.5 py-1.5 rounded-lg inline-block border border-slate-200 dark:border-black/10">
                     {category.title}
                   </h4>
                   <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-3">
                     {category.items.map((skill) => (
                       <div
                         key={skill.name}
-                        className={`flex items-center gap-3 p-3 rounded-2xl bg-black/35 border border-white/10 backdrop-blur-md transition-all duration-300 transform hover:scale-[1.03] cursor-pointer ${skill.color}`}
+                        className={`flex items-center gap-3 p-3 rounded-2xl bg-white border border-[#38bdf8]/20 shadow-[0_0_15px_rgba(6,182,212,0.1)] dark:bg-black/35 dark:border-white/10 backdrop-blur-md transition-all duration-300 transform hover:scale-[1.03] cursor-pointer hover:border-[#38bdf8]/50 dark:hover:border-red-400/40 hover:shadow-[0_0_22px_rgba(6,182,212,0.25)] ${skill.color}`}
                       >
-                        <div className="flex items-center justify-center p-2 rounded-xl bg-white/5 shrink-0">
+                        <div className="flex items-center justify-center p-2 rounded-xl bg-slate-50 dark:bg-white/5 shrink-0">
                           {skill.icon}
                         </div>
-                        <span className="text-white text-xs font-black tracking-wide leading-tight">
+                        <span className="text-slate-700 dark:text-white text-xs font-black tracking-wide leading-tight">
                           {skill.name}
                         </span>
                       </div>
@@ -315,7 +315,7 @@ const About = () => {
                 </div>
               ))}
             </div>
-            <p className="text-black text-xl font-black tracking-wide uppercase pt-4">
+            <p className="text-[#0f172a] dark:text-black text-xl font-black tracking-wide uppercase pt-4">
               Let's build something amazing together. 🚀
             </p>
           </div>
@@ -324,16 +324,16 @@ const About = () => {
 
       {/* Torn paper divider at bottom */}
       <div className="absolute bottom-0 left-0 w-full pointer-events-none z-30 transform translate-y-1">
-        <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-12 md:h-20 fill-white">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-full h-12 md:h-20 fill-[#f8fafc] dark:fill-black">
           <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,119.62,189.5,99.8,242.79,81.82,282.88,63.6,321.39,56.44Z"></path>
         </svg>
       </div>
 
       {/* Decorative stars */}
-      <div className="absolute top-10 right-10 md:right-20 text-black opacity-30 animate-pulse">
+      <div className="absolute top-10 right-10 md:right-20 text-[#06b6d4] dark:text-black opacity-30 animate-pulse">
         <svg className="w-16 h-16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0l2.5 8.5L23 12l-8.5 2.5L12 23l-2.5-8.5L1 12l8.5-2.5z"/></svg>
       </div>
-      <div className="absolute bottom-32 left-4 md:left-20 text-black opacity-30 animate-pulse" style={{ animationDelay: '1s' }}>
+      <div className="absolute bottom-32 left-4 md:left-20 text-[#38bdf8] dark:text-black opacity-30 animate-pulse" style={{ animationDelay: '1s' }}>
         <svg className="w-20 h-20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0l2.5 8.5L23 12l-8.5 2.5L12 23l-2.5-8.5L1 12l8.5-2.5z"/></svg>
       </div>
     </section>

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Routes, Route, useLocation, useNavigationType } from 'react-router-dom'
 import Preloader from './components/Preloader'
 import Navbar from './components/Navbar'
@@ -74,11 +74,23 @@ function Home() {
 }
 
 function App() {
+  const [isDark, setIsDark] = useState(() => localStorage.getItem('theme') === 'dark');
+
+  useEffect(() => {
+    if (isDark) {
+      document.body.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.body.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+  }, [isDark]);
+
   return (
     <Router>
       <ScrollToTop />
       <Preloader />
-      <Navbar />
+      <Navbar isDark={isDark} setIsDark={setIsDark} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<AllProjectsPage />} />
