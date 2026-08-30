@@ -198,8 +198,8 @@ const Hero = () => {
           alt="Sridhar S Portrait"
           className="w-full h-full object-cover object-center opacity-100 dark:opacity-50 ken-burns-bg"
         />
-        {/* Lighter, narrow gradient overlay to ensure text readability on the left without covering the photo */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#f8fafc]/70 via-[#f8fafc]/25 to-transparent md:bg-gradient-to-r md:from-[#f8fafc]/65 md:via-transparent md:to-transparent dark:from-black/80 dark:via-transparent dark:to-transparent pointer-events-none transition-all duration-300" />
+        {/* Soft edge gradient overlay to ensure high contrast and text readability on the left without covering the photo */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#f8fafc]/85 via-[#f8fafc]/45 to-transparent md:bg-gradient-to-r md:from-[#f8fafc]/80 md:via-[#f8fafc]/35 md:to-transparent dark:from-black/90 dark:via-transparent dark:to-transparent pointer-events-none transition-all duration-300" />
       </div>
 
       {/* Layer 1: Spotlight reveal image — drawn by rAF, controlled by isActive */}
@@ -225,7 +225,7 @@ const Hero = () => {
           <p
             data-aos="fade-up"
             data-aos-delay="200"
-            className="text-[#334155] dark:text-white text-sm md:text-lg font-semibold mb-8 max-w-md drop-shadow-sm"
+            className="text-slate-950 dark:text-white text-sm md:text-lg font-bold mb-8 max-w-md drop-shadow-[0_2px_10px_rgba(248,250,252,0.95)] dark:drop-shadow-[0_2px_10px_rgba(0,0,0,0.85)] leading-relaxed"
           >
             I build GenAI-driven applications, full-stack web applications, data analytics platforms,
             and secure blockchain solutions using Python, SQL, Web technologies, and Web3.
