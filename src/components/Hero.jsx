@@ -199,7 +199,7 @@ const Hero = () => {
           className="w-full h-full object-cover object-center opacity-100 dark:opacity-50 ken-burns-bg"
         />
         {/* Soft edge gradient overlay to ensure high contrast and text readability on the left without covering the photo */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#f8fafc]/85 via-[#f8fafc]/45 to-transparent md:bg-gradient-to-r md:from-[#f8fafc]/80 md:via-[#f8fafc]/35 md:to-transparent dark:from-black/90 dark:via-transparent dark:to-transparent pointer-events-none transition-all duration-300" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#f8fafc]/40 via-[#f8fafc]/15 to-transparent md:bg-gradient-to-r md:from-[#f8fafc]/80 md:via-[#f8fafc]/35 md:to-transparent dark:from-black/90 dark:via-transparent dark:to-transparent pointer-events-none transition-all duration-300" />
       </div>
 
       {/* Layer 1: Spotlight reveal image — drawn by rAF, controlled by isActive */}
