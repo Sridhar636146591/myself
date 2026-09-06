@@ -299,11 +299,11 @@ const Contact = () => {
                   <button 
                     type="submit" 
                     disabled={status === 'sending'}
-                    className="px-8 py-3 rounded-full border border-slate-300 text-slate-800 font-bold flex items-center justify-center gap-3 hover:bg-slate-900 hover:text-white hover:border-transparent dark:border-white/40 dark:text-white dark:hover:bg-white dark:hover:text-[#ff2a2a] transition-all duration-300 group whitespace-nowrap self-start sm:self-auto cursor-pointer disabled:opacity-50 shadow-sm hover:shadow-[0_10px_20px_rgba(6,182,212,0.1)]"
+                    className="px-9 py-3.5 rounded-full bg-[#0f172a] text-white font-extrabold text-sm tracking-wider uppercase flex items-center justify-center gap-3 hover:bg-[#06b6d4] hover:shadow-[0_10px_30px_rgba(6,182,212,0.4)] dark:bg-white dark:text-black dark:hover:bg-black dark:hover:text-white dark:hover:shadow-[0_10px_30px_rgba(0,0,0,0.5)] transition-all duration-300 transform hover:scale-[1.05] active:scale-95 group whitespace-nowrap self-start sm:self-auto cursor-pointer disabled:opacity-50 shadow-lg"
                   >
                     {status === 'sending' ? 'Sending...' : 'Send'}
-                    <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    <svg className="w-5 h-5 transform group-hover:translate-x-1.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                     </svg>
                   </button>
                 </div>
