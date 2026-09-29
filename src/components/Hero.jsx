@@ -192,14 +192,14 @@ const Hero = () => {
       `}</style>
 
       {/* Layer 0: Base background portrait (Ken Burns) */}
-      <div className="absolute inset-0 w-full h-full z-0 overflow-hidden bg-[#f8fafc] dark:bg-black">
+      <div className="absolute inset-0 w-full h-full z-0 overflow-hidden bg-black">
         <img
           src={heroPhoto}
           alt="Sridhar S Portrait"
-          className="w-full h-full object-cover object-center opacity-100 dark:opacity-50 ken-burns-bg"
+          className="w-full h-full object-cover object-center opacity-50 ken-burns-bg"
         />
         {/* Gradient overlay */}
-        <div className="absolute inset-0 dark:bg-gradient-to-r dark:from-black/90 dark:via-transparent dark:to-transparent pointer-events-none transition-all duration-300" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-transparent to-transparent pointer-events-none transition-all duration-300" />
       </div>
 
       {/* Layer 1: Spotlight reveal image — drawn by rAF, controlled by isActive */}
@@ -214,10 +214,12 @@ const Hero = () => {
         <div className="flex flex-col items-start text-left max-w-2xl w-full pointer-events-auto">
           <h1
             data-aos="fade-up"
-            className="text-slate-950 dark:text-white text-3xl md:text-5xl font-bold mb-4 tracking-tight drop-shadow-[0_2px_12px_rgba(248,250,252,0.95)] dark:drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)]"
+            className="text-white mb-4 tracking-tight leading-[1.1]"
           >
-            Hi, I'm <br />
-            <span className="text-slate-950 dark:text-white [-webkit-text-stroke:1.5px_#0f172a] dark:[-webkit-text-stroke:1.5px_white] md:[-webkit-text-stroke:2px_#0f172a] dark:md:[-webkit-text-stroke:2px_white]">
+            <span className="text-white/90 font-extrabold text-2xl sm:text-3xl md:text-4xl block mb-1">
+              Hi, I'm
+            </span>
+            <span className="text-white text-5xl sm:text-6xl md:text-7xl font-black drop-shadow-[0_4px_20px_rgba(0,0,0,0.9)] inline-block">
               Sridhar S
             </span>
           </h1>
@@ -225,7 +227,7 @@ const Hero = () => {
           <p
             data-aos="fade-up"
             data-aos-delay="200"
-            className="text-slate-950 dark:text-white text-sm md:text-lg font-bold mb-8 max-w-md drop-shadow-[0_2px_10px_rgba(248,250,252,0.95)] dark:drop-shadow-[0_2px_10px_rgba(0,0,0,0.85)] leading-relaxed"
+            className="text-white text-sm md:text-lg font-bold mb-8 max-w-md drop-shadow-[0_2px_10px_rgba(0,0,0,0.85)] leading-relaxed"
           >
             I build GenAI-driven applications, full-stack web applications, data analytics platforms,
             and secure blockchain solutions using Python, SQL, Web technologies, and Web3.
@@ -238,13 +240,13 @@ const Hero = () => {
           >
             <button
               onClick={scrollToProjects}
-              className="px-4 py-2 md:px-6 md:py-2 text-xs md:text-base rounded-full bg-[#0f172a] text-white font-semibold hover:bg-slate-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 transition-all duration-300 transform hover:scale-105 shadow-md cursor-pointer"
+              className="px-4 py-2 md:px-6 md:py-2 text-xs md:text-base rounded-full bg-white text-black font-semibold hover:bg-gray-200 transition-all duration-300 transform hover:scale-105 shadow-md cursor-pointer"
             >
               View My Work
             </button>
             <button
               onClick={scrollToContact}
-              className="px-4 py-2 md:px-6 md:py-2 text-xs md:text-base rounded-full bg-slate-100 border border-slate-300 text-slate-800 hover:bg-slate-200 dark:bg-black/40 dark:border-white dark:text-white dark:hover:bg-black/60 transition-all duration-300 backdrop-blur-md cursor-pointer"
+              className="px-4 py-2 md:px-6 md:py-2 text-xs md:text-base rounded-full bg-black/40 border border-white text-white hover:bg-black/60 transition-all duration-300 backdrop-blur-md cursor-pointer"
             >
               Contact Me
             </button>
@@ -260,21 +262,21 @@ const Hero = () => {
             className="flex flex-row md:flex-col items-center gap-2 md:gap-3 cursor-pointer group"
             onClick={toggleVoice}
           >
-            <div className="w-12 h-12 md:w-20 md:h-20 rounded-full border border-slate-300 bg-slate-200/50 text-slate-800 hover:bg-[#06b6d4] hover:text-white dark:border-white/30 dark:bg-black/20 dark:text-white dark:hover:bg-[#ff2a2a] transition-all duration-500 shadow-[0_0_20px_rgba(0,0,0,0.05)] dark:shadow-[0_0_30px_rgba(255,255,255,0.1)] hover:shadow-[0_0_25px_rgba(6,182,212,0.5)] dark:hover:shadow-[0_0_40px_rgba(255,42,42,0.6)] flex items-center justify-center">
+            <div className="w-12 h-12 md:w-20 md:h-20 rounded-full border border-white/30 bg-black/20 text-white hover:bg-[#ff2a2a] transition-all duration-500 shadow-[0_0_30px_rgba(255,255,255,0.1)] hover:shadow-[0_0_40px_rgba(255,42,42,0.6)] flex items-center justify-center">
               {isPlayingVoice ? (
                 <div className="flex items-end gap-1 h-6">
-                  <span className="w-1 bg-slate-700 group-hover:bg-white dark:bg-white rounded-full waveform-bar" style={{ height: '10px' }} />
-                  <span className="w-1 bg-slate-700 group-hover:bg-white dark:bg-white rounded-full waveform-bar" style={{ height: '22px' }} />
-                  <span className="w-1 bg-slate-700 group-hover:bg-white dark:bg-white rounded-full waveform-bar" style={{ height: '14px' }} />
-                  <span className="w-1 bg-slate-700 group-hover:bg-white dark:bg-white rounded-full waveform-bar" style={{ height: '6px' }} />
+                  <span className="w-1 bg-white rounded-full waveform-bar" style={{ height: '10px' }} />
+                  <span className="w-1 bg-white rounded-full waveform-bar" style={{ height: '22px' }} />
+                  <span className="w-1 bg-white rounded-full waveform-bar" style={{ height: '14px' }} />
+                  <span className="w-1 bg-white rounded-full waveform-bar" style={{ height: '6px' }} />
                 </div>
               ) : (
-                <svg className="w-5 h-5 md:w-8 md:h-8 text-slate-700 group-hover:text-white dark:text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z" />
                 </svg>
               )}
             </div>
-            <span className="text-slate-600 dark:text-white/70 group-hover:text-[#06b6d4] dark:group-hover:text-white text-[10px] md:text-xs font-bold tracking-widest uppercase transition-opacity text-center">
+            <span className="text-white/70 group-hover:text-white text-[10px] md:text-xs font-bold tracking-widest uppercase transition-opacity text-center">
               {isPlayingVoice ? 'Playing Intro' : 'Listen to Intro'}
             </span>
           </div>
@@ -289,18 +291,18 @@ const Hero = () => {
             <div className={`relative w-10 h-10 md:w-14 md:h-14 rounded-full border flex justify-center items-center transition-all duration-500 hover:scale-110 ${
               isMagicActive
                 ? 'border-yellow-400 shadow-[0_0_35px_rgba(250,204,21,0.5)]'
-                : 'bg-slate-200/50 border-slate-300 dark:bg-black/20 dark:border-white/30 backdrop-blur-md shadow-[0_0_20px_rgba(0,0,0,0.05)] group-hover:border-yellow-400/50'
+                : 'bg-black/20 border-white/30 backdrop-blur-md shadow-[0_0_20px_rgba(0,0,0,0.05)] group-hover:border-yellow-400/50'
             }`}>
               {/* Rotating neon background lights */}
               {isMagicActive && (
                 <>
                   <div className="absolute -inset-[3px] rounded-full bg-gradient-to-r from-[#ff007f] via-[#7f00ff] via-[#00f0ff] to-[#ff007f] opacity-80 blur-[8px] animate-spin pointer-events-none" style={{ animationDuration: '4s', zIndex: -2 }} />
-                  <div className="absolute inset-[1px] rounded-full bg-white dark:bg-black pointer-events-none" style={{ zIndex: -1 }} />
+                  <div className="absolute inset-[1px] rounded-full bg-black pointer-events-none" style={{ zIndex: -1 }} />
                 </>
               )}
               <svg 
                 className={`relative z-10 w-4 h-4 md:w-6 md:h-6 transition-all duration-500 ${
-                  isMagicActive ? 'text-yellow-400 drop-shadow-[0_0_8px_rgba(250,204,21,0.8)]' : 'text-slate-700 dark:text-white/60 group-hover:text-yellow-400/70'
+                  isMagicActive ? 'text-yellow-400 drop-shadow-[0_0_8px_rgba(250,204,21,0.8)]' : 'text-white/60 group-hover:text-yellow-400/70'
                 }`}
                 fill={isMagicActive ? "currentColor" : "none"} 
                 stroke="currentColor" 
@@ -311,7 +313,7 @@ const Hero = () => {
               </svg>
             </div>
             <span className={`text-[10px] md:text-xs font-bold tracking-widest uppercase transition-colors duration-500 text-center ${
-              isMagicActive ? 'text-yellow-400 font-extrabold' : 'text-slate-600 dark:text-white/70 group-hover:text-[#06b6d4] dark:group-hover:text-white'
+              isMagicActive ? 'text-yellow-400 font-extrabold' : 'text-white/70 group-hover:text-white'
             }`}>
               {isMagicActive ? 'Turn Off Light' : 'Turn On Light'}
             </span>

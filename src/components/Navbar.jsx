@@ -37,7 +37,7 @@ const Navbar = ({ isDark, setIsDark }) => {
         
         {/* Left Side: Logo/Name */}
         <div className="flex items-center">
-          <Link to="/" className="text-[#0f172a] dark:text-white text-2xl font-black tracking-tight">
+          <Link to="/" className={`text-2xl font-black tracking-tight transition-colors duration-300 ${isScrolled ? 'text-[#0f172a] dark:text-white' : 'text-white'}`}>
             Sridhar S
           </Link>
         </div>
@@ -49,7 +49,7 @@ const Navbar = ({ isDark, setIsDark }) => {
               <a 
                 key={link} 
                 href={isHome ? `#${link.toLowerCase()}` : `/#${link.toLowerCase()}`}
-                className="text-slate-600 dark:text-white/80 hover:text-slate-900 dark:hover:text-white font-medium relative group transition-colors duration-300"
+                className={`font-medium relative group transition-colors duration-300 ${isScrolled ? 'text-slate-600 dark:text-white/80 hover:text-slate-900 dark:hover:text-white' : 'text-white/80 hover:text-white'}`}
               >
                 {link}
                 {/* Smooth hover underline */}
@@ -119,7 +119,7 @@ const Navbar = ({ isDark, setIsDark }) => {
           {isHome && (
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-[#0f172a] dark:text-white focus:outline-none p-2"
+              className={`focus:outline-none p-2 ${isScrolled || isOpen ? 'text-[#0f172a] dark:text-white' : 'text-white'}`}
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 {isOpen ? (

@@ -5,11 +5,9 @@ const Preloader = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Wait for the water fill animation (1.5s) + a small pause (0.5s)
-    // before the shutter goes up smoothly.
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2200);
+    }, 2800);
     
     return () => clearTimeout(timer);
   }, []);
@@ -21,35 +19,29 @@ const Preloader = () => {
           key="preloader"
           initial={{ y: 0 }}
           exit={{ y: "-100%" }}
-          transition={{ duration: 1.2, ease: [0.76, 0, 0.24, 1] }}
+          transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
           className="fixed inset-0 w-full h-screen bg-black z-[100000] flex items-center justify-center overflow-hidden"
         >
-          {/* Subtle background red glow */}
-          <div className="absolute w-[400px] h-[400px] bg-[#ff2a2a]/5 rounded-full blur-[100px] pointer-events-none z-0" />
+          {/* Ambient glow */}
+          <div className="absolute w-[350px] h-[350px] bg-cyan-500/10 dark:bg-red-500/10 rounded-full blur-[120px] pointer-events-none z-0" />
 
-          {/* Logo Container */}
+          {/* Simple, clean text animation */}
           <motion.div 
-            exit={{ opacity: 0, scale: 0.95, y: -20 }}
-            transition={{ duration: 0.4, ease: "easeOut" }}
-            className="relative text-5xl md:text-7xl font-black tracking-tighter z-10"
+            initial={{ opacity: 0, y: 15, scale: 0.96 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: -15, scale: 0.96 }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            className="relative z-10 flex flex-col items-center gap-3"
           >
-            {/* Background text (empty state - solid red outline) */}
-            <div 
-              className="text-transparent select-none"
-              style={{ WebkitTextStroke: '1.5px #ff2a2a' }}
-            >
-              𝗦𝗥𝗜𝗗𝗛𝗔𝗥 𝗦
-            </div>
-
-            {/* Foreground text (water fill state - solid red text) */}
+            <h1 className="text-3xl md:text-5xl font-black tracking-[0.25em] text-white uppercase select-none">
+              SRIDHAR S
+            </h1>
             <motion.div 
-              className="absolute top-0 left-0 text-[#ff2a2a] overflow-hidden whitespace-nowrap select-none"
-              initial={{ clipPath: 'inset(100% 0 0 0)' }}
-              animate={{ clipPath: 'inset(0% 0 0 0)' }}
-              transition={{ duration: 1.6, ease: [0.76, 0, 0.24, 1], delay: 0.2 }}
-            >
-              𝗦𝗥𝗜𝗗𝗛𝗔𝗥 𝗦
-            </motion.div>
+              initial={{ width: 0 }}
+              animate={{ width: "100%" }}
+              transition={{ duration: 1.2, delay: 0.3, ease: "easeInOut" }}
+              className="h-[2px] bg-gradient-to-r from-transparent via-[#06b6d4] dark:via-[#ff2a2a] to-transparent rounded-full"
+            />
           </motion.div>
 
         </motion.div>
