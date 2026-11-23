@@ -4,7 +4,6 @@ import Preloader from './components/Preloader'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
-import Services from './components/Services'
 import Projects from './components/Projects'
 import Certifications from './components/Certifications'
 import Contact from './components/Contact'
@@ -65,7 +64,6 @@ function Home() {
     <>
       <Hero />
       <About />
-      <Services />
       <Projects />
       <Certifications />
       <Contact />

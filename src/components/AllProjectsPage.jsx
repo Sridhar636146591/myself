@@ -26,14 +26,16 @@ const AllProjectsPage = () => {
       techStack: ["React", "Tailwind CSS", "Vite", "Generative AI", "NVIDIA Accelerated"],
       linkText: "Live Application",
       link: "https://success-ai-frontend.onrender.com/",
+      certificateLink: "/certificates/AllNVIDIACertificate.pdf",
+      certificateLinkText: "View Certificate",
       featured: true
     },
     {
       title: "AI-Driven Supply Chain Tracker",
-      category: <><span className="text-white font-bold">Google Hack2Skill</span> / Logistics</>,
+      category: "Google Hack2Skill / Logistics",
       date: "2026",
-      award: <>Developed for <span className="text-white font-bold">Google Hack2Skill</span></>,
-      description: <>Built an AI-powered supply chain management and tracking system for the <span className="text-white font-semibold">Google Hack2Skill</span> hackathon. Implemented predictive delay modeling, real-time logistics analytics, and inventory optimization pipelines to streamline operations.</>,
+      award: <>Developed for <span className="text-slate-900 dark:text-white font-black">Google Hack2Skill</span></>,
+      description: <>Built an AI-powered supply chain management and tracking system for the <span className="text-slate-900 dark:text-white font-bold">Google Hack2Skill</span> hackathon. Implemented predictive delay modeling, real-time logistics analytics, and inventory optimization pipelines to streamline operations.</>,
       techStack: ["Python", "Google Cloud AI", "Logistics Analytics", "Render Cloud"],
       linkText: "Live Application",
       link: "https://supply-chain-zbfw.onrender.com/",
@@ -121,9 +123,9 @@ const AllProjectsPage = () => {
               }`}
             >
               {/* Top corner gradient glow */}
-              <div className="absolute -top-10 -right-10 w-40 h-40 bg-[#38bdf8]/5 group-hover:bg-[#38bdf8]/15 dark:bg-[#ff2a2a]/5 dark:group-hover:bg-[#ff2a2a]/15 transition-all duration-500 pointer-events-none"></div>
+              <div className="absolute -top-12 -right-12 w-48 h-48 bg-gradient-to-bl from-[#38bdf8]/15 to-transparent dark:from-[#ff2a2a]/15 dark:to-transparent rounded-full blur-2xl group-hover:scale-110 transition-all duration-500 pointer-events-none"></div>
 
-              <div>
+              <div className="relative z-10">
                 {/* Meta details */}
                 <div className="flex justify-between items-center mb-6">
                   <span className="text-xs font-bold uppercase tracking-widest text-[#06b6d4] dark:text-[#ff2a2a]">
@@ -136,7 +138,7 @@ const AllProjectsPage = () => {
 
                 {/* Award Badge if exists */}
                 {project.award && (
-                  <div className="mb-5 inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-yellow-500/10 border border-yellow-500/20 text-yellow-600 dark:text-yellow-400 text-xs font-bold leading-tight">
+                  <div className="mb-5 inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-amber-50 border border-amber-200 text-amber-800 dark:bg-yellow-500/10 dark:border-yellow-500/20 dark:text-yellow-400 text-xs font-bold leading-tight">
                     {project.award}
                   </div>
                 )}

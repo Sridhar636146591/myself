@@ -21,7 +21,7 @@ const Navbar = ({ isDark, setIsDark }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navLinks = ['Home', 'About', 'Services', 'Projects', 'Certifications', 'Contact'];
+  const navLinks = ['Home', 'About', 'Projects', 'Certifications', 'Contact'];
 
   return (
     <nav 

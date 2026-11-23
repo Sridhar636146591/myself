@@ -13,6 +13,14 @@ const cIcon = (
   </svg>
 );
 
+const rIcon = (
+  <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <ellipse cx="12" cy="12" rx="9" ry="9" />
+    <path d="M9 16V8h4a2.5 2.5 0 0 1 0 5H9" />
+    <path d="M12.5 13l3.5 3" />
+  </svg>
+);
+
 const sqlIcon = (
   <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
     <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
@@ -180,7 +188,8 @@ const About = () => {
       items: [
         { name: 'Python', color: 'hover:border-yellow-400/50 hover:shadow-[0_15px_30px_rgba(234,179,8,0.25)] text-yellow-600 dark:text-yellow-400', icon: pythonIcon },
         { name: 'Java', color: 'hover:border-orange-400/50 hover:shadow-[0_15px_30px_rgba(249,115,22,0.25)] text-orange-600 dark:text-orange-400', icon: javaIcon },
-        { name: 'C', color: 'hover:border-sky-400/50 hover:shadow-[0_15px_30px_rgba(14,165,233,0.25)] text-sky-600 dark:text-sky-400', icon: cIcon }
+        { name: 'C', color: 'hover:border-sky-400/50 hover:shadow-[0_15px_30px_rgba(14,165,233,0.25)] text-sky-600 dark:text-sky-400', icon: cIcon },
+        { name: 'R', color: 'hover:border-blue-500/50 hover:shadow-[0_15px_30px_rgba(59,130,246,0.25)] text-blue-600 dark:text-blue-400', icon: rIcon }
       ]
     },
     {
